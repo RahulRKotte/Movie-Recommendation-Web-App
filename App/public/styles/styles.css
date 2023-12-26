@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 75%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #44464777;
+    /* border-radius: 8px; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.movie-title{
+    background-color: #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+}
+
+.similar-movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    margin-top: 20px;
+    
+}
+
+.movie {
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.movie img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+.movie:hover {
+    transform: translateY(-5px) scale(1.09);
+    box-shadow: -4px 0 8px rgb(189, 252, 2), 0 4px 8px rgb(189, 252, 2); /* Add shadow on left and bottom on hover */
+}
+
+
+.movie p {
+    margin-top: 8px;
+}
+
+.favorite-movie{
+    width: 100%;
+    align-content: center;
+    align-items: center;
+}
+
+#movieInput{
+    border-radius: 8px;
+}
+
+button{
+    border-radius: 8px;
+}
+
+.index-button{
+    background-color: #e93b49;
+    color: #fff;
+    padding: 0px;
+    border: none;
+    cursor: pointer;   
+}
+
+.index-button:hover{
+    background-color: #007bff;  
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .similar-movies {
+        display: flex; 
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        margin-top: 20px;
+    }
+    .movie {
+        width: 100%;
+    }
+}

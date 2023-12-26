@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <title>Movie Recommendation System - Results</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Top 20 Similar Movies based on <%= movieName %>:</h2>
+        <div class="similar-movies">
+            <% results.forEach(movie => { %>
+                <div class="movie">
+                    <form action="/getSimilarMovies" method="GET">
+                        <input type="hidden" name="movieName" value="<%= movie.title %>">
+                        <button class="index-button" type="submit">
+                            <img src="https://image.tmdb.org/t/p/w500/<%= movie.poster_path %>" alt="<%= movie.title %> Poster">
+                        </button>
+                    </form>
+                    <p class="movie-title"><%= movie.title %></p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
